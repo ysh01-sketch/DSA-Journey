@@ -1,0 +1,8 @@
+Day 1
+
+I've been practising DSA already for a while with basics.
+
+At the moment I'm working on trees.
+
+Following are the topics I have gone through today:
+
