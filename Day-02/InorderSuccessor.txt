@@ -1,0 +1,60 @@
+'''
+class Node:
+    def __init__(self, val, k):
+        self.right = None
+        self.data = val
+        self.left = None
+'''
+class Solution:
+    # returns the inorder successor of the Node x in BST (rooted at 'root')
+    def inorderSuccessor(self, root, x):
+        # Code here
+        
+        if not root or not x:
+            return -1
+            
+        suc = None
+        found = False
+        
+        while root:
+            
+            
+            if root.data == x.data:
+                found = True
+                
+                if root.right:
+                    
+                    root = root.right
+                    while root.left:
+                        root = root.left
+                    
+                    suc = root
+                    
+                break
+                    
+                        
+                        
+                        
+            
+            elif root.data < x.data:
+                
+                 root = root.right
+                 
+            else:
+                
+                 suc = root
+                 root = root.left
+                
+        
+        if not found or suc == None:
+            return -1
+        
+        return suc.data
+            
+            
+        
+                
+            
+                
+            
+            
